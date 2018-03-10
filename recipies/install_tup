@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+sudo apt-get update && sudo apt-get -y install libfuse-dev
+git clone https://github.com/gittup/tup.git /tmp/tup-master
+cd /tmp/tup-master
+./bootstrap-nofuse.sh
+mv ./tup ~/bin
+cd ..
+rm -rf tup-master

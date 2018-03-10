@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+export GOPATH=/home/$USER/.go
+curl -sL https://godeb.s3.amazonaws.com/godeb-amd64.tar.gz | tar zx
+sudo ./godeb install
+rm godeb go*.deb
+
+go get -u golang.org/x/vgo

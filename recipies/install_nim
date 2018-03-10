@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+curl https://nim-lang.org/choosenim/init.sh -sSf | sh -s -- -y
+rm -rf /tmp/choosenim* /tmp/untar-nim
